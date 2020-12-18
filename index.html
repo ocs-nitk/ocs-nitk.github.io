@@ -1,0 +1,82 @@
+﻿
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="香川高等専門学校（高松キャンパス）漫画研究部の公式サイトです">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="shortcut icon" href="image/favicon.png">
+        <link rel="stylesheet" href="style/top.css" media="all">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+                integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+                crossorigin="anonymous">
+        <title>漫画研究部｜香川高専</title>
+        <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v8.0" nonce="5MGNWm2y"></script>
+        <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <nav class="top-bar">
+            <a href="https://ocs-nitk.github.io"><img class="logotype" alt="logotype" src="./image/logo1.png" onclick="location.reload();"></a>
+            <form class="search-form" action="#works">
+                <input class="search-form__input" name="search" type="search" placeholder="作品･作者名、収録部誌名、発行年で検索できます">
+                <button class="search-form__submit-btn"><i class="fas fa-search"></i></button>
+            </form>
+        </nav>
+        
+        <header class="header" id="header">
+            <div class="topic">
+                <h1 class="topic__header">latest update</h1>
+                <div class="book--small">
+                    <img class="book__thumb--small" v-bind:src="thumb(book.file)">
+                    <div class="book__detail--small">
+                        <h1 class="book__title--small">{{ book.title }}</h1>
+                        <small class="book__page-len">{{ `${book.page}ページ` }}</small>
+                        <a class="button button--fill" v-bind:href="link(book.file)">読む</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <article class="article article--about">
+            <h1 class="article__header article__header--about">About</h1>
+                <p class="text">
+                    私たち漫画研究部は、年に1度の学生祭で作品集を頒布することを目標に、みんなで楽しく漫画やイラストを描こう！という部活動です。
+                    このウェブサイトでも、私たちの作品を随時公開していきますので、ぜひ御覧ください！
+                </p>
+        </article>
+
+        <article class="article article--works" id="works">
+            <h1 class="article__header article__header--works">Works</h1>
+
+            <div class="book" v-for="book in searchBooks" :key="book.file">
+                <img class="book__thumb" v-bind:src="thumb(book.file)">
+                <div class="book__detail">
+                    <h1 class="title">{{ book.title }}</h1>
+                    <small class="size">{{ `${book.page}ページ` }}</small>
+                    <a class="button button--fill" v-bind:href="link(book.file)">読む</a>
+                    <a class="button button--line" href="https://forms.gle/2n92y8RJwdWqDJqS6">感想を送る</a>
+                </div>
+            </div>
+        </article>
+
+        <footer class="footer">
+            <div class="shares">
+                <div class="share" id="share__line"><div class="line-it-button" data-lang="ja" data-type="share-a" data-ver="3" data-url="https://ocs-nitk.github.io" data-color="default" data-size="large" data-count="false" style="display: none;"></div></div>
+                <div class="share"><a class="hatena-bookmark-button" href="https://b.hatena.ne.jp/entry/s/ocs-nitk.github.io" data-hatena-bookmark-layout="basic-label" data-hatena-bookmark-lang="ja" data-hatena-bookmark-width="93" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/v4/public/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a></div>
+                <div class="share"><a class="twitter-share-button" href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-size="large" data-url="https://ocs-nitk.github.io" data-show-count="false">Tweet</a></div>
+                <div class="share"><div class="fb-share-button" data-href="https://ocs-nitk.github.io" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Focs-nitk.github.io%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">シェア</a></div></div>
+            </div>
+            <span>このWebサイトに掲載されている文書･画像等を、手段･形態によらず複製･転載することを禁じます</span>
+            <small class="credit">&copy; 漫画研究部 香川高等専門学校高松キャンパス</small>
+        </footer>
+        
+        <script src="script/main.js"></script>
+    </body>
+</html>

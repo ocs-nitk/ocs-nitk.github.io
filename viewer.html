@@ -1,0 +1,35 @@
+﻿
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="香川高等専門学校（高松キャンパス）漫画研究部の公式サイトです">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="shortcut icon" href="image/favicon.png">
+        <link rel="stylesheet" href="style/view.css" media="all">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+                integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+                crossorigin="anonymous">
+        <title>漫画研究部｜香川高専</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        <nav class="nav">
+            <header id="header" class="header hidden">
+                <a href="https://ocs-nitk.github.io" class="back-btn" onclick=""><i class="far fa-arrow-alt-circle-left"></i></a>
+                <h1 class="title" id="title"></h1>
+            </header>
+            <div class="pageMove">
+                <div class="button" onclick="next();"></div>
+                <div class="button" onclick="menu();"></div>
+                <div class="button" onclick="prev();"></div>
+            </div>
+            <footer id="footer" class="footer hidden"><input id="slider" class="meter" type="range"><span id="nowpage"></span></footer>
+        </nav>
+        <script src="script/comic.js"></script>
+    </body>
+</html>
