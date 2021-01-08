@@ -113,3 +113,42 @@ slider.oninput = () => {
     page = slider.value - slider.value%pageUnit;
     updateImage();
 }
+
+const adjustX = () => {
+    
+}
+
+nav.onmousedown = (event) => {
+    let beforeX = 0;
+    let beforeY = 0;
+
+    nav.onmousemove = (e) => {
+        if(beforeX && beforeY){
+            console.log(e.clientX - beforeX, e.clientY - beforeY);
+        }
+        beforeX = e.clientX;
+        beforeY = e.clientY;
+
+    }
+    nav.onmouseup = () => { nav.onmousemove = null; }
+    nav.onmouseleave = () => { nav.onmousemove = null; }
+}
+
+nav.ontouchstart = (event) => {
+    let beforeX = 0;
+    let beforeY = 0;
+    
+    nav.ontouchmove = (e) => {
+        if(beforeX && beforeY){
+            console.log(
+                e.changedTouches[0].clientX - beforeX,
+                e.changedTouches[0].clientY - beforeY
+            );
+        }
+        beforeX = e.changedTouches[0].clientX;
+        beforeY = e.changedTouches[0].clientY;
+    }
+    
+    nav.ontouchend = () => {  }
+    event.preventDefault();
+}

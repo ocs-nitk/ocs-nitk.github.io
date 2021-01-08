@@ -70,8 +70,4 @@ window.onload = () => {
         if(a.getBoundingClientRect().top < y*2/3)
             a.classList.remove("hidden");
     }
-
-    if(!navigator.userAgent.match(/iPhone|Android.+Mobile/)){
-        share__line.classList.add('hidden');
-    }
 }

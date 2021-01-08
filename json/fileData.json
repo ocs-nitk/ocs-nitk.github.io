@@ -1,15 +1,59 @@
 [
     {
-        "title": "OCS 2018",
-        "file": "ocs-2018",
-        "page": 14,
-        "year": 2018,
-        "width": 1080,
-        "height": 1530,
+        "title": "オマケ本 2020",
+        "file": "ocs-2020-ex",
+        "page": 28,
+        "year": 2020,
+        "width": 1280,
+        "height": 1810,
         "contents": [
             {
-                "title": "トイレのよし子さん",
+                "title": "",
+                "author": "王水"
+            },
+            {
+                "title": "",
+                "author": "こっしー"
+            },
+            {
+                "title": "",
+                "author": "酢酸"
+            },
+            {
+                "title": "",
+                "author": "湯田順希"
+            },
+            {
+                "title": "",
+                "author": "ナタマメ"
+            },
+            {
+                "title": "",
+                "author": "ファンブル"
+            },
+            {
+                "title": "",
+                "author": "アイカ"
+            },
+            {
+                "title": "",
+                "author": "のってぃー"
+            },
+            {
+                "title": "",
+                "author": "雪降の"
+            },
+            {
+                "title": "",
+                "author": "青木"
+            },
+            {
+                "title": "",
                 "author": "搾菜"
+            },
+            {
+                "title": "",
+                "author": "焼き魚定食"
             }
         ]
     }
