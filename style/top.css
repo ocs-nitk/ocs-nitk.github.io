@@ -188,7 +188,7 @@ body{
 }
 
 .button--fill{
-    color: rgb(40, 40, 40);
+    color: #ffffff;
     background: red;
     border: solid 2px red;
 }
