@@ -258,3 +258,13 @@ body{
     color: #ffffff;
     border-radius: 4px 4px 0 0;
 }
+
+/* モバイル版 
+--------------------------------- */
+@media (max-width: 600px) {
+    /* HEADER */
+    .header {
+        background-image: url('../image/header-mobile.png');
+        background-position: top;
+    }
+}
