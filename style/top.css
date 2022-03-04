@@ -135,19 +135,9 @@ body{
     background-image: url('../image/header-about.png');
 }
 
-/*
 .book{
     display: flex;
     margin: 0 16px 64px 16px;
-}
-*/
-
-.book{
-    display: grid;
-    gap: 26px;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 6%;
-    margin-bottom: 50px;
 }
 
 .book--small{
